@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Hub | Netlify Portal</title>
-    <meta name="description" content="A Bento-style portal for automatically tracking your Netlify projects." />
-  </head>
-  <body>
-    <div id="app">
-      <header>
-        <div class="header-content">
-          <h1>Project Hub</h1>
-          <p>내 모든 Netlify 프로젝트를 한눈에 관리하는 Bento 스타일 포털</p>
-        </div>
-        <div class="header-actions">
-          <!-- Future: Settings or Auth button -->
-        </div>
-      </header>
-      
-      <main class="bento-grid" id="project-container">
-        <!-- Projects will be injected here -->
-        <div class="card card-large">
-          <div class="card-content">
-            <span class="card-tag">OVERVIEW</span>
-            <h3>환영합니다</h3>
-            <p>이곳은 당신의 Netlify 프로젝트들이 자동으로 모이는 공간입니다. API 연결을 통해 실시간 상태와 링크를 확인할 수 있습니다.</p>
-          </div>
-          <div class="card-footer">
-            <span style="color: var(--text-secondary); font-size: 0.8rem;">총 12개의 프로젝트 발견됨</span>
-          </div>
-        </div>
 
-        <!-- Placeholder cards to show design -->
-        <div class="card card-medium-h">
-          <div class="card-content">
-            <span class="card-tag">LATEST</span>
-            <h3>개발 중인 주력 프로젝트</h3>
-            <p>최근 업데이트된 사이트들을 우선적으로 보여줍니다.</p>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Hub | Netlify Portal</title>
+  <meta name="description" content="A Bento-style portal for automatically tracking your Netlify projects." />
+</head>
 
-        <div class="card">
-          <div class="card-content">
-            <span class="card-tag">STATS</span>
-            <h3>시스템 상태</h3>
-            <p>모든 사이트가 온라인 상태입니다.</p>
-          </div>
+<body>
+  <div id="app">
+    <header>
+      <div class="header-content">
+        <h1>Project Hub</h1>
+
+      </div>
+      <div class="header-actions">
+        <!-- Future: Settings or Auth button -->
+      </div>
+    </header>
+
+    <main class="bento-grid" id="project-container">
+      <!-- Projects will be injected here -->
+      <div class="card card-large">
+        <div class="card-content">
+          <span class="card-tag">OVERVIEW</span>
+          <h3>환영합니다</h3>
+          <p>이곳은 당신의 Netlify 프로젝트들이 자동으로 모이는 공간입니다. API 연결을 통해 실시간 상태와 링크를 확인할 수 있습니다.</p>
         </div>
-      </main>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+        <div class="card-footer">
+          <span style="color: var(--text-secondary); font-size: 0.8rem;">총 12개의 프로젝트 발견됨</span>
+        </div>
+      </div>
+
+      <!-- Placeholder cards to show design -->
+      <div class="card card-medium-h">
+        <div class="card-content">
+          <span class="card-tag">LATEST</span>
+          <h3>개발 중인 주력 프로젝트</h3>
+          <p>최근 업데이트된 사이트들을 우선적으로 보여줍니다.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <span class="card-tag">STATS</span>
+          <h3>시스템 상태</h3>
+          <p>모든 사이트가 온라인 상태입니다.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
