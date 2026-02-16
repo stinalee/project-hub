@@ -31,8 +31,12 @@ async function syncProjects() {
 
         const rawSites = await response.json();
 
+        const currentSiteName = process.env.SITE_NAME; // Netlify provides this during build
+        
         // 넷리파이에서 가져온 원본 데이터를 그대로 화면용 데이터로 변환
-        const manifest = rawSites.map(s => {
+        const manifest = rawSites
+            .filter(s => s.name !== currentSiteName && s.name !== 'stina-hub') // 본인(포털)은 목록에서 제외
+            .map(s => {
             // 1. 넷리파이 이름을 보기 좋게 변환 (예: my-car-project -> My Car Project)
             const prettyName = s.name
                 .split('-')
